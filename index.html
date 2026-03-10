@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anak Agung Ngurah Mahardikajaya - Portfolio</title>
+    <meta name="description" content="Portfolio web Anak Agung Ngurah Mahardikajaya, pelajar SMA berumur 15 tahun.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <main class="glass-card">
+            <header class="card-header">
+                <div class="avatar" aria-hidden="true">
+                    <img src="Me.jpeg" alt="Mahardikajaya" class="avatar-img">
+                </div>
+                <h1>Anak Agung Ngurah Mahardikajaya</h1>
+                <h2 class="subtitle">Pelajar SMA</h2>
+            </header>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Umur</span>
+                    <span class="value">15 Tahun</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Tanggal Lahir</span>
+                    <span class="value">7 April 2010</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Asal</span>
+                    <span class="value">Bali, Indonesia</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Pendidikan Terakhir</span>
+                    <span class="value">SMA</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Keahlian</span>
+                    <span class="value">LUA Scripting</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Makanan Favorit</span>
+                    <span class="value">Ayam Goreng</span>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h3>Tentang Saya</h3>
+                <p>Halo! Saya adalah seorang pelajar SMA yang bersemangat dalam belajar hal-hal baru. Website ini adalah
+                    langkah awal saya untuk memperkenalkan diri di dunia digital.</p>
+            </div>
+
+            <div class="projects-section">
+                <div class="project-card">
+                    <h3>Projek Saya</h3>
+                    <p>Lihat pengalaman seru yang telah saya buat di Roblox!</p>
+                    <a href="https://www.roblox.com/games/139912805385728/Self-Defense" target="_blank"
+                        class="roblox-link">Mainkan Sekarang</a>
+                </div>
+
+                <div class="gameplay-card">
+                    <h3>Gameplay</h3>
+                    <div class="carousel-container">
+                        <div class="carousel-slide fade">
+                            <img src="Gameplay1.jpeg" alt="Gameplay 1" class="carousel-img">
+                        </div>
+                        <div class="carousel-slide fade" style="display: none;">
+                            <img src="Gameplay2.jpeg" alt="Gameplay 2" class="carousel-img">
+                        </div>
+
+                        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="contact-btn">Hubungi Saya</button>
+        </main>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("carousel-slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
